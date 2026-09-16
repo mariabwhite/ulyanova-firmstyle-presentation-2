@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Метод Ульяновой · Презентация 2 · Детализация фирменного стиля</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face{
+  font-family:'Pushkin';
+  src:url('assets/fonts/PushkinScriptLow.ttf') format('truetype'),
+      url('assets/fonts/Pushkin.ttf') format('truetype');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+:root{
+  --navy:#0E1B44;
+  --navy-2:#152556;
+  --navy-3:#0B1638;
+  --line:#27376E;
+  --gold:#C9A15E;
+  --gold-2:#E7C86B;
+  --burgundy:#6B1B2E;
+  --cream:#FBF7EE;
+  --cream-2:#B9B3A4;
+  --display:'Prata', Georgia, serif;
+  --body:'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --script:'Pushkin', cursive;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; scroll-padding-top:80px; }
+body{
+  background:var(--navy);
+  color:var(--cream);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{ display:block; width:100%; height:auto; }
+a{ color:var(--gold-2); text-decoration:none; }
+a:hover{ color:var(--gold); }
+
+.wrap{ max-width:1280px; margin:0 auto; padding:0 32px; }
+
+/* ---------- Верхняя панель ---------- */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(11,22,56,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{
+  height:60px; display:flex; align-items:center; justify-content:space-between; gap:24px;
+}
+.topbar .brand{
+  font-family:var(--display); font-size:17px; color:var(--cream); white-space:nowrap;
+}
+.topbar nav{ display:flex; gap:22px; overflow-x:auto; }
+.topbar nav a{
+  font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+  color:var(--cream-2); white-space:nowrap; padding:6px 0;
+}
+.topbar nav a:hover{ color:var(--gold-2); }
+
+/* ---------- Секции ---------- */
+.section{ padding:88px 0; border-top:1px solid var(--line); }
+.section:first-of-type{ border-top:none; }
+.kicker{
+  font-size:12px; font-weight:600; letter-spacing:2.6px; text-transform:uppercase;
+  color:var(--gold-2); margin-bottom:18px;
+}
+h2{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(30px, 4vw, 50px); line-height:1.12; letter-spacing:-.5px;
+  color:var(--cream); margin-bottom:20px;
+}
+h2 .g{ color:var(--gold-2); }
+.lead{ font-size:17px; line-height:1.65; color:var(--cream); max-width:76ch; }
+.lead b{ color:var(--gold-2); font-weight:600; }
+.rule{ width:88px; height:2px; background:var(--gold-2); margin:26px 0 34px; }
+
+/* ---------- Сетки ---------- */
+.grid{ display:grid; gap:28px; align-items:start; }
+.g2{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+.g3{ grid-template-columns:repeat(3, minmax(0,1fr)); }
+.g4{ grid-template-columns:repeat(4, minmax(0,1fr)); }
+@media (max-width:1000px){ .g3,.g4{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+@media (max-width:680px){ .g2,.g3,.g4{ grid-template-columns:minmax(0,1fr); } }
+
+/* ---------- Карточка носителя ---------- */
+figure{ display:flex; flex-direction:column; gap:14px; }
+.shot{
+  background:var(--navy-2);
+  border:1px solid var(--line);
+  padding:14px;
+}
+.shot.hero{ border-color:var(--gold); padding:18px; }
+.shot.dark{ background:var(--navy-3); }
+figcaption{ display:flex; flex-direction:column; gap:4px; }
+.cap-t{
+  font-family:var(--display); font-size:20px; line-height:1.25; color:var(--gold-2);
+}
+.cap-s{ font-size:14px; color:var(--cream-2); }
+.cap-row{
+  display:flex; justify-content:space-between; align-items:baseline; gap:12px;
+  font-size:12px; font-weight:600; letter-spacing:1.6px; text-transform:uppercase;
+  color:var(--cream-2);
+  padding-bottom:10px; border-bottom:1px solid var(--line);
+}
+.note{ font-size:14px; line-height:1.6; color:var(--cream); }
+.note .g{ color:var(--gold-2); font-weight:600; }
+.note b{ color:var(--gold-2); font-weight:600; }
+
+/* ---------- Инфо-полоса ---------- */
+.strip{
+  background:var(--navy-2); border:1px solid var(--line);
+  padding:20px 24px; font-size:15px; line-height:1.6; color:var(--cream);
+  margin-top:34px;
+}
+.strip b{ color:var(--gold-2); font-weight:600; }
+
+/* ---------- Обложка ---------- */
+.cover{ padding:96px 0 104px; }
+.cover .inner{ display:grid; grid-template-columns:1.35fr .65fr; gap:72px; align-items:center; }
+@media (max-width:900px){ .cover .inner{ grid-template-columns:minmax(0,1fr); gap:44px; } }
+.cover h1{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(46px, 7vw, 92px); line-height:1.02; letter-spacing:-1.5px;
+  color:var(--cream); margin:0;
+}
+.cover h1 .g{ color:var(--gold-2); }
+.cover .sub{ font-size:20px; line-height:1.5; color:var(--cream); max-width:34ch; margin-top:26px; }
+.cover .meta{ font-size:15px; line-height:1.7; color:var(--cream-2); margin-top:26px; }
+.cover .tag{
+  display:inline-block; margin-top:26px;
+  border:1px solid var(--gold); color:var(--gold-2);
+  font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+  padding:10px 18px;
+}
+.crest{ background:var(--burgundy); border:1px solid var(--gold); padding:22px; }
+
+/* ---------- Оглавление ---------- */
+.toc{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:0 56px; }
+@media (max-width:680px){ .toc{ grid-template-columns:minmax(0,1fr); } }
+.toc a{
+  display:flex; align-items:baseline; gap:18px;
+  padding:14px 0; border-bottom:1px solid var(--line);
+  color:var(--cream);
+}
+.toc a:hover{ color:var(--gold-2); }
+.toc .n{
+  font-family:var(--display); font-size:24px; line-height:1; color:var(--gold-2);
+  width:44px; flex-shrink:0;
+}
+.toc .t{ font-size:16px; font-weight:500; }
+
+/* ---------- Палитра ---------- */
+.swatches{ display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:18px; }
+@media (max-width:900px){ .swatches{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+@media (max-width:560px){ .swatches{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
+.chip{ height:128px; }
+.sw-n{ margin-top:12px; font-size:14px; font-weight:600; color:var(--cream); }
+.sw-h{ font-size:13px; color:var(--cream-2); }
+.bar{ display:flex; height:30px; margin-top:34px; }
+
+/* ---------- Финал ---------- */
+.finale{ padding:88px 0 112px; border-top:1px solid var(--line); }
+.finale .slogan{ font-family:var(--script); font-size:52px; line-height:1; color:var(--gold-2); }
+.finale .sign{ font-size:15px; color:var(--cream-2); margin-top:14px; }
+
+/* ---------- Подвал ---------- */
+.foot{
+  border-top:1px solid var(--line); padding:34px 0 56px;
+  display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+}
+.foot .slogan{ font-family:var(--script); font-size:34px; line-height:1; color:var(--gold-2); }
+.foot .site{ font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--cream-2); }
+.hint{ font-size:13px; color:var(--cream-2); margin-top:10px; }
+
+/* ---------- Лайтбокс ---------- */
+.lightbox{
+  display:none; position:fixed; inset:0; z-index:9999;
+  background:rgba(6,10,28,.95); backdrop-filter:blur(8px);
+  align-items:center; justify-content:center; padding:2vw; cursor:zoom-out;
+}
+.lightbox.on{ display:flex; }
+.lightbox img{ max-width:96vw; max-height:96vh; width:auto; height:auto; border:1px solid var(--gold); }
+.lb-close{
+  position:absolute; top:2vh; right:2vw; width:54px; height:54px;
+  background:var(--navy-2); color:var(--gold-2); border:1px solid var(--gold);
+  display:grid; place-items:center; cursor:pointer; font:700 26px/1 var(--body);
+}
+.lb-close:hover{ background:var(--burgundy); }
+.shot img{ cursor:zoom-in; }
+
+@media print{
+  body{ background:#fff; color:#000; }
+  .topbar, .lightbox, .lb-close, .hint{ display:none !important; }
+  .section, figure, .strip{ break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">Метод Ульяновой</div>
+    <nav>
+      <a href="#toc">Носители</a>
+      <a href="#palette">Палитра</a>
+      <a href="#business">Деловой комплект</a>
+      <a href="#checklists">Материалы</a>
+      <a href="#courses">Курсы</a>
+      <a href="#indoor">Вывески</a>
+      <a href="#merch">Мерч</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== ОБЛОЖКА ===================== -->
+<section class="cover">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--cream-2);padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:72px;flex-wrap:wrap;">
+      <span>Метод Ульяновой · Онлайн-школа</span>
+      <span>MMXXVI · Concept III · Gold</span>
+    </div>
+
+    <div class="inner">
+      <div>
+        <div class="kicker">Детализация фирменного стиля · этап III</div>
+        <h1>Презентация <span class="g">02</span></h1>
+        <div class="rule"></div>
+        <div class="sub">14 носителей фирменного стиля, мерч и цветовая палитра — одним документом.</div>
+        <div class="tag">14 носителей + мерч + палитра</div>
+        <div class="meta">Наталья Кротова × Мария Бурцева · для Анны Ульяновой<br>16 сентября 2026</div>
+      </div>
+      <div class="crest">
+        <img src="assets/lite/logo-crest.jpg" alt="Герб «Метод Ульяновой»">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ОГЛАВЛЕНИЕ ===================== -->
+<section class="section" id="toc">
+  <div class="wrap">
+    <div class="kicker">Оглавление · содержание презентации · список ТЗ · этап 3</div>
+    <h2>14 <span class="g">носителей</span> фирменного стиля</h2>
+    <div class="rule"></div>
+
+    <div class="toc">
+      <a href="#viz"><span class="n">01</span><span class="t">Визитка</span></a>
+      <a href="#icons"><span class="n">08</span><span class="t">Пиктограммы · 4 вида</span></a>
+      <a href="#business"><span class="n">02</span><span class="t">Бланк</span></a>
+      <a href="#courses"><span class="n">09</span><span class="t">Карточка онлайн-курса</span></a>
+      <a href="#business"><span class="n">03</span><span class="t">Конверт</span></a>
+      <a href="#books"><span class="n">10</span><span class="t">Обложка учебника A5</span></a>
+      <a href="#business"><span class="n">04</span><span class="t">Папка A4</span></a>
+      <a href="#indoor"><span class="n">11</span><span class="t">Вывеска indoor</span></a>
+      <a href="#business"><span class="n">05</span><span class="t">Блокнот A5</span></a>
+      <a href="#outdoor"><span class="n">12</span><span class="t">Вывеска outdoor · 4 × 0,6 м</span></a>
+      <a href="#checklists"><span class="n">06</span><span class="t">Чек-лист · 1 лист A4</span></a>
+      <a href="#trailer"><span class="n">13</span><span class="t">Прицеп · 2 стороны · 2,5 × 1,5 м</span></a>
+      <a href="#presentation"><span class="n">07</span><span class="t">Презентация · обложка + внутренний лист A4</span></a>
+      <a href="#merch"><span class="n">14</span><span class="t">Футболка · DTF · молочный / navy</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ПАЛИТРА ===================== -->
+<section class="section" id="palette">
+  <div class="wrap">
+    <div class="kicker">Концепт III · цветовая формула</div>
+    <h2>Синий + <span class="g">золото</span> + бордо</h2>
+    <div class="lead">
+      Основа — «Ink Navy» #0E1B44 (60% носителей). Акценты — матовое золото Bronze #C9A15E (20%). Внутренний фон объёмного герба — бордо #6B1B2E. Слоган — рукописный Pushkin в золоте. Дополнительная тёплая линия — кремовый #FBF7EE для контрастных мокапов и внутренних листов.
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g2" style="gap:44px;">
+      <figure>
+        <div class="shot hero"><img src="assets/lite/palette.jpg" alt="Фирменная палитра — доска цветов и сочетаний"></div>
+      </figure>
+      <div>
+        <div class="swatches">
+          <div>
+            <div class="chip" style="background:#0E1B44;border:1px solid var(--line);"></div>
+            <div class="sw-n">Ink Navy</div><div class="sw-h">#0E1B44</div>
+          </div>
+          <div>
+            <div class="chip" style="background:#152556;border:1px solid var(--line);"></div>
+            <div class="sw-n">Deep Navy</div><div class="sw-h">#152556</div>
+          </div>
+          <div>
+            <div class="chip" style="background:#C9A15E;"></div>
+            <div class="sw-n">Bronze</div><div class="sw-h">#C9A15E</div>
+          </div>
+          <div>
+            <div class="chip" style="background:#E7C86B;"></div>
+            <div class="sw-n">Rich Gold</div><div class="sw-h">#E7C86B</div>
+          </div>
+          <div>
+            <div class="chip" style="background:#6B1B2E;"></div>
+            <div class="sw-n">Bordeaux</div><div class="sw-h">#6B1B2E</div>
+          </div>
+          <div>
+            <div class="chip" style="background:#FBF7EE;"></div>
+            <div class="sw-n">Cream</div><div class="sw-h">#FBF7EE</div>
+          </div>
+        </div>
+
+        <div class="bar">
+          <div style="width:60%;background:#0E1B44;border:1px solid var(--line);"></div>
+          <div style="width:20%;background:#C9A15E;"></div>
+          <div style="width:20%;background:#6B1B2E;"></div>
+        </div>
+
+        <div class="strip" style="margin-top:24px;">
+          <b>Правило 60·20·20:</b> Ink Navy — 60% площади любого носителя · Gold + Bronze — 20% (буквы, линии, герб) · Bordeaux — 20% (внутренний фон герба, акценты)
+        </div>
+
+        <div style="font-family:var(--script);font-size:38px;line-height:1.2;color:var(--gold-2);margin-top:28px;">
+          Больше, чем уроки<span style="color:var(--cream);"> ♥</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 01 · ВИЗИТКА ===================== -->
+<section class="section" id="viz">
+  <div class="wrap">
+    <div class="kicker">Позиция 01 · Визитка</div>
+    <h2>Визитка · <span class="g">90×50 мм</span></h2>
+    <div class="lead">
+      Двусторонняя, картон 300 г/м² с матовой ламинацией, золотое тиснение слогана. Реквизиты обновлены под ИП Ульянова А. В. (ОГРНИП 314503419800031).
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g3">
+      <figure>
+        <div class="cap-row"><span>Вариант 1 · «Крупный герб»</span><span>90×50 мм</span></div>
+        <div class="shot"><img src="assets/lite/01-vizitka-v1.jpg" alt="Визитка вариант 1"></div>
+        <div class="note"><span class="g">Идея:</span> максимальный «вау-эффект» с первого взгляда — герб занимает 60% лица.<br><span class="g">Концепт:</span> Front — большой герб + подпись «онлайн-школа». Back — иконки контактов gold + слоган Pushkin в правом нижнем углу.</div>
+      </figure>
+      <figure>
+        <div class="cap-row"><span>Вариант 2 · «С девизом»</span><span>90×50 мм</span></div>
+        <div class="shot"><img src="assets/lite/01-vizitka-v2.jpg" alt="Визитка вариант 2"></div>
+        <div class="note"><span class="g">Идея:</span> визитка «руководителя» — сдержаннее, добавлен девиз «знания сегодня — большие возможности завтра».<br><span class="g">Концепт:</span> Front — герб + подпись + вертикальная золотая полоса. Back — ФИО, должность, полные контакты, «Обучение по всей России и СНГ».</div>
+      </figure>
+      <figure>
+        <div class="cap-row"><span>Live-мокап</span><span>пачка на мраморе</span></div>
+        <div class="shot"><img src="assets/lite/vizitka-mockup.jpg" alt="Визитка мокап на мраморе"></div>
+        <div class="note"><span class="g">Идея:</span> демонстрация «в руках» — как визитка выглядит в реальной жизни на клиентском столе.<br><span class="g">Технология:</span> <b>300 г/м² soft-touch</b> + gold hot-stamping герба и слогана + скруглённые углы R2 мм. Тон бумаги — тёплый.</div>
+      </figure>
+    </div>
+
+    <div class="strip">
+      <b>Обновить перед печатью:</b> телефон → <b>+7 985 636 60 29</b> · email → <b>Ulyanova.anna3d@yandex.ru</b> · добавить строку адреса: <b>142602, Московская обл., г. Орехово-Зуево, ул. Ленина, 76</b>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 02–05 · ДЕЛОВОЙ КОМПЛЕКТ ===================== -->
+<section class="section" id="business">
+  <div class="wrap">
+    <div class="kicker">Позиции 02-05 · Деловой комплект</div>
+    <h2>Бланк · конверт · <span class="g">папка · блокнот</span></h2>
+    <div class="rule"></div>
+
+    <div class="grid g4">
+      <figure>
+        <div class="cap-row"><span>02 · Бланк A4</span><span>210×297 мм</span></div>
+        <div class="shot"><img src="assets/lite/blank-a4.jpg" alt="Бланк A4 фирменный"></div>
+        <div class="note"><span class="g">Идея:</span> официальный документ школы.<br><span class="g">Концепт:</span> cream фон + герб + gold акцент листвы, все реквизиты ИП внизу.</div>
+      </figure>
+      <figure>
+        <div class="cap-row"><span>03 · Конверт E65 · 2 варианта</span><span>110×220 мм</span></div>
+        <div style="display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:10px;">
+          <div class="shot"><img src="assets/lite/envelope-e65.jpg" alt="Конверт молочный"></div>
+          <div class="shot"><img src="assets/lite/envelope-navy.jpg" alt="Конверт navy"></div>
+        </div>
+        <div class="note"><span class="g">Идея:</span> «письмо открывается — сразу премиум».<br><span class="g">Концепт:</span> 2 базы — молочный и navy · gold-foil герб · слоган Pushkin.</div>
+      </figure>
+      <figure>
+        <div class="cap-row"><span>04 · Папка A4</span><span>220×310 мм</span></div>
+        <div class="shot"><img src="assets/lite/folder-a4.jpg" alt="Папка A4 с патерном"></div>
+        <div class="note"><span class="g">Идея:</span> «портфель ученика» с патерном МУ+звёзды.<br><span class="g">Концепт:</span> navy обложка + герб + 4 принципа (современно · технологично · вдохновляюще · результативно), справа gold-патерн-карман.</div>
+      </figure>
+      <figure>
+        <div class="cap-row"><span>05 · Блокнот A5</span><span>148×210 мм</span></div>
+        <div class="shot"><img src="assets/lite/notebook-a5.jpg" alt="Блокнот A5 на пружине"></div>
+        <div class="note"><span class="g">Идея:</span> рабочий блокнот для конспектов.<br><span class="g">Концепт:</span> navy обложка на gold-пружине + герб + слоган + 4 иконки-принципа, резинка gold, box-упаковка.</div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 07 · ПРЕЗЕНТАЦИЯ ===================== -->
+<section class="section" id="presentation">
+  <div class="wrap">
+    <div class="kicker">Позиция 07 · Презентация · обложка + внутренний лист A4</div>
+    <h2>Презентация · <span class="g">обложка + внутренний лист</span></h2>
+    <div class="lead">
+      Единый шаблон для любых учебных материалов Анны: <b>обложка</b> (navy, крупный герб, заголовок темы Cormorant, слоган Pushkin, эстетичный декор листвы) + <b>внутренний лист</b> (cream, blocks-структура «что нужно знать · уметь · помнить», сравнительная таблица, примеры на photo-card, чек-yourself, помни/самое главное). Пример темы: «Present Perfect vs Past Simple».
+    </div>
+    <div class="rule"></div>
+
+    <figure>
+      <div class="shot hero dark"><img src="assets/lite/checklist-pp-vs-ps-2sides.jpg" alt="Презентация · обложка + внутренний лист A4"></div>
+    </figure>
+
+    <div class="strip">
+      <b>Как использовать:</b> обложка меняет только тему («Past Continuous», «Условные предложения», «Модальные глаголы»). Внутренний лист — та же blocks-структура из 3-4 секций + бокс «Помни». Формат: A4 портрет, cream + navy, экспорт в PDF из HTML/InDesign.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 08 · ПИКТОГРАММЫ ===================== -->
+<section class="section" id="icons">
+  <div class="wrap">
+    <div class="kicker">Позиция 08 · Пиктограммы · 4 вида</div>
+    <h2>Иконки бренда · <span class="g">4 вида</span></h2>
+    <div class="lead">
+      Объёмные bronze-иконки на прозрачном фоне (SVG/PNG). Одинаковая пластика с гербом — золотистый металл, овальный лавр, скруглённые формы. Готовы для векторной печати на папке, чек-листе, презентации, сайте.
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g4">
+      <figure>
+        <div class="shot dark"><img src="assets/lite/icon-book.png" alt="Пиктограмма книга"></div>
+        <figcaption><div class="cap-t">01 · Знание</div><div class="cap-s">раскрытая книга + звезда</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot dark"><img src="assets/lite/icon-target.png" alt="Пиктограмма цель"></div>
+        <figcaption><div class="cap-t">02 · Цель</div><div class="cap-s">мишень + ✓ в лавре</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot dark"><img src="assets/lite/icon-check.png" alt="Пиктограмма чекбокс"></div>
+        <figcaption><div class="cap-t">03 · Практика</div><div class="cap-s">чекбокс + карандаш</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot dark"><img src="assets/lite/icon-cards.png" alt="Пиктограмма карточки"></div>
+        <figcaption><div class="cap-t">04 · Материалы</div><div class="cap-s">2 карточки со стрелкой</div></figcaption>
+      </figure>
+    </div>
+
+    <div class="strip">
+      <b>Где используем:</b> папка A4 (внизу 4 в ряд) · чек-листы (заголовки блоков) · карточки курсов (3 плюса) · слайды презентаций · футер сайта · сториз в соцсетях.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 06 · ЧЕК-ЛИСТЫ ===================== -->
+<section class="section" id="checklists">
+  <div class="wrap">
+    <div class="kicker">Позиция 06 · Чек-лист · 4 варианта</div>
+    <h2>Чек-листы · <span class="g">полезные материалы</span></h2>
+    <div class="lead">
+      «В чек-листе — полезная информация по английскому или программированию» — как хотела Анна. Три темы + один универсальный «для эффективного урока». Все A4 портрет, cream или navy палитра, gold-декор, слоган Pushkin.
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g3">
+      <figure>
+        <div class="shot"><img src="assets/lite/checklist-pp-training.jpg" alt="Тренировка Present Perfect и Past Simple"></div>
+        <figcaption><div class="cap-t">Тренировка PP + PS</div><div class="cap-s">грамматика · самопроверка</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/checklist-materials.jpg" alt="Полезные материалы"></div>
+        <figcaption><div class="cap-t">Полезные материалы</div><div class="cap-s">4 категории для учёбы</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/checklist-lesson-prep.jpg" alt="Для эффективного урока"></div>
+        <figcaption><div class="cap-t">Для эффективного урока</div><div class="cap-s">для педагога</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10 · УЧЕБНИКИ ===================== -->
+<section class="section" id="books">
+  <div class="wrap">
+    <div class="kicker">Позиция 07 · Обложки учебников · 10 · Учебники A5</div>
+    <h2>Учебники · <span class="g">148×210 мм</span></h2>
+    <div class="lead">
+      Единая система обложек: navy · объёмный герб МУ вверху · крупный английский заголовок Cormorant · подзаголовок кириллицей · 3 пиктограммы преимуществ · стопка книг с названиями глав · слоган Pushkin снизу.
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g3">
+      <figure>
+        <div class="shot"><img src="assets/lite/uch-english-school.jpg" alt="English for School"></div>
+        <figcaption><div class="cap-t">English for School</div><div class="cap-s">учебник для школьников · A1 – B1</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/uch-grammar.jpg" alt="Grammar"></div>
+        <figcaption><div class="cap-t">Grammar</div><div class="cap-s">все времена английского глагола</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/uch-reading-joy.jpg" alt="Reading with Joy"></div>
+        <figcaption><div class="cap-t">Reading with Joy</div><div class="cap-s">чтение на английском с нуля</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10+ · КОЛЛАЖ ===================== -->
+<section class="section" id="collage">
+  <div class="wrap">
+    <div class="kicker">Позиция 10 · Учебники · вся линейка</div>
+    <h2>Вся линейка · <span class="g">одним листом</span></h2>
+    <div class="rule"></div>
+
+    <figure>
+      <div class="shot hero"><img src="assets/lite/composite-15.jpg" alt="Все учебники и носители · коллаж"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== 08 · КАРТОЧКИ КУРСОВ ===================== -->
+<section class="section" id="courses">
+  <div class="wrap">
+    <div class="kicker">Позиция 08 · Карточки онлайн-курсов</div>
+    <h2>Онлайн-курсы · <span class="g">карточки для сайта</span></h2>
+    <div class="lead">
+      Единый шаблон: navy верх с золотым гербом + метка «ОНЛАЙН-КУРС» + заголовок Playfair + фото ученика в интерьере + 3 иконки · внизу — кнопка «УЗНАТЬ БОЛЬШЕ» бордо/gold. Точный размер px — <b>уточним у Анны</b>.
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g4">
+      <figure>
+        <div class="shot"><img src="assets/lite/card-a.jpg" alt="Английский для школьников · вар. 1"></div>
+        <figcaption><div class="cap-t">Английский для школьников</div><div class="cap-s">вариант 1</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/card-b.jpg" alt="Английский для школьников · вар. 2"></div>
+        <figcaption><div class="cap-t">Английский для школьников</div><div class="cap-s">вариант 2</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/card-d.jpg" alt="Английский для школьников · вар. 3"></div>
+        <figcaption><div class="cap-t">Английский для школьников</div><div class="cap-s">вариант 3</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/card-e.jpg" alt="Английский для школьников · вар. 4"></div>
+        <figcaption><div class="cap-t">Английский для школьников</div><div class="cap-s">вариант 4</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 09 · ДРУГИЕ КУРСЫ ===================== -->
+<section class="section" id="courses-more">
+  <div class="wrap">
+    <div class="kicker">Позиция 09 · Карточки онлайн-курсов · другие темы</div>
+    <h2>Другие курсы · <span class="g">чтение · сайты · игры</span></h2>
+    <div class="rule"></div>
+
+    <div class="grid g3">
+      <figure>
+        <div class="shot"><img src="assets/lite/card-reading.jpg" alt="Чтение с нуля"></div>
+        <figcaption><div class="cap-t">Чтение с нуля</div><div class="cap-s">для детей от 6 лет</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/card-web.jpg" alt="Создание сайтов с нуля"></div>
+        <figcaption><div class="cap-t">Создание сайтов</div><div class="cap-s">с нуля до готового проекта</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/card-c.jpg" alt="Scratch и Roblox"></div>
+        <figcaption><div class="cap-t">Scratch и Roblox</div><div class="cap-s">первые проекты и логика</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 11 · ВЫВЕСКА INDOOR ===================== -->
+<section class="section" id="indoor">
+  <div class="wrap">
+    <div class="kicker">Позиция 11 · Вывеска indoor</div>
+    <h2>Внутренние вывески · <span class="g">офис</span></h2>
+    <div class="lead">
+      Комплект внутренних вывесок: главная стена ресепшена + серия табличек (образовательный центр на двери, ID-табличка при входе, «Кабинет преподавателя»). Материал — акрил / композит + gold hot-stamp. Размер финализируется замерщиком.
+    </div>
+    <div class="rule"></div>
+
+    <div class="grid g2">
+      <figure>
+        <div class="shot"><img src="assets/lite/vyv-indoor.jpg" alt="Вывеска indoor · ресепшн"></div>
+        <figcaption><div class="cap-t">Стена ресепшена</div><div class="cap-s">крупный объёмный герб · «More than a language»</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/vyv-indoor-2.jpg" alt="Внутренние таблички"></div>
+        <figcaption><div class="cap-t">Серия табличек в интерьере</div><div class="cap-s">образовательный центр · ID · кабинет преподавателя</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 12 · ВЫВЕСКА OUTDOOR ===================== -->
+<section class="section" id="outdoor">
+  <div class="wrap">
+    <div class="kicker">Позиция 12 · Вывеска outdoor</div>
+    <h2>Наружная вывеска · <span class="g">4 × 0,6 м</span></h2>
+    <div class="lead">
+      Навесная конструкция над окнами офиса — место, где сейчас временная вывеска. Композитная панель + внутренняя golden LED-подсветка букв. Размер утверждён Анной 15.09.
+    </div>
+    <div class="rule"></div>
+
+    <figure style="margin-bottom:28px;">
+      <div class="shot hero"><img src="assets/lite/vyv-outdoor.jpg" alt="Вывеска outdoor · концепт"></div>
+    </figure>
+
+    <div class="grid g2">
+      <figure>
+        <div class="shot"><img src="assets/lite/vyv-outdoor-2.jpg" alt="Мокап на фасаде · день"></div>
+        <figcaption><div class="cap-t">Мокап на реальном фасаде</div><div class="cap-s">над окнами 2-го этажа</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/vyv-outdoor-3.jpg" alt="Мокап на фасаде · утро"></div>
+        <figcaption><div class="cap-t">Мокап при дневном свете</div><div class="cap-s">финальная позиция</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 13 · ПРИЦЕП ===================== -->
+<section class="section" id="trailer">
+  <div class="wrap">
+    <div class="kicker">Позиция 13 · Прицеп · 2 стороны</div>
+    <h2>Прицеп · <span class="g">2 стороны · 2,5 × 1,5 м</span></h2>
+    <div class="lead">
+      Технология: широкоформатная печать на плёнке с ламинацией. Утверждённый размер — 2,5 × 1,5 м (стандартный борт лёгкого прицепа); при необходимости — 3 × 1,5 м с сохранением композиции.
+    </div>
+    <div class="rule"></div>
+
+    <figure style="margin-bottom:28px;">
+      <div class="shot hero"><img src="assets/lite/pricep-real.jpg" alt="Прицеп — 2 стороны в одном кадре"></div>
+    </figure>
+
+    <div class="grid g2">
+      <div>
+        <div class="cap-row"><span>Сторона 1 · «знакомство»</span><span>2500 × 1500 мм</span></div>
+        <div class="note" style="margin-top:14px;"><span class="g">Идея:</span> «кто мы и что даём» — узнаваемость бренда за 3 секунды с трассы.<br><span class="g">Концепт:</span> герб + название + 3 иконки-ценности (учимся с удовольствием · развиваем уверенность · открываем мир) + фото ученицы у Big Ben + рукописный «More than a language ♥».</div>
+      </div>
+      <div>
+        <div class="cap-row"><span>Сторона 2 · «оффер»</span><span>2500 × 1500 мм</span></div>
+        <div class="note" style="margin-top:14px;"><span class="g">Идея:</span> «что купить и куда идти» — конкретика уровней + путь к покупке.<br><span class="g">Концепт:</span> герб + «онлайн-уроки индивидуально и в группах» + чипы A1/A2/B1/B2/C1 + список направлений (школа · ОГЭ/ЕГЭ · IELTS/TOEFL · разговорный · для жизни) + фото ученика с брендированным рюкзаком + QR «Перейти на сайт».</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 14 · МЕРЧ ===================== -->
+<section class="section" id="merch">
+  <div class="wrap">
+    <div class="kicker">Позиция 14 · Футболка + мерч (бонус)</div>
+    <h2>Футболка · <span class="g">DTF · молочный / navy</span></h2>
+    <div class="rule"></div>
+
+    <div class="grid g4">
+      <figure>
+        <div class="shot"><img src="assets/lite/tshirt-premium.jpg" alt="Premium · крупный герб"></div>
+        <figcaption><div class="cap-t">Premium · крупный герб</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/tshirt-model.jpg" alt="На модели"></div>
+        <figcaption><div class="cap-t">На модели · front + back</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/tshirt-board.jpg" alt="Борд 2 цвета"></div>
+        <figcaption><div class="cap-t">Борд · 2 цвета</div></figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/lite/tshirt-3rd.jpg" alt="С палитрой"></div>
+        <figcaption><div class="cap-t">С фирменной палитрой</div></figcaption>
+      </figure>
+    </div>
+
+    <div class="strip">
+      <b>Технология:</b> DTF-печать (Direct-to-Film) · <b>принт на груди слева:</b> герб 60 мм высотой · <b>на спине:</b> звезда 30 мм. Отдельный векторный AI-файл с только принтом — для передачи в типографию.
+    </div>
+
+    <div class="strip" style="margin-top:16px;">
+      <b>Про футболку в вектор:</b> отдельным AI/PDF файлом даём только принт (герб + «Больше, чем уроки!») — базовые размеры принта <b>20 × 25 см</b> на груди, DTF.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ФИНАЛ ===================== -->
+<section class="finale" id="finale">
+  <div class="wrap">
+    <div class="kicker">Финал · общий лист всех носителей</div>
+    <h2>Форма Premium · <span class="g">финал</span></h2>
+    <div class="rule"></div>
+
+    <figure style="margin-bottom:44px;">
+      <div class="shot hero"><img src="assets/lite/merch-forma-v3.jpg" alt="Форма Premium — финал"></div>
+    </figure>
+
+    <div class="slogan">Спасибо<span style="color:var(--cream);"> ♥</span></div>
+    <div class="sign">Наталья Кротова × Мария Бурцева · 2026</div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <div>
+      <div class="slogan">Больше, чем уроки<span style="color:var(--cream);"> ♥</span></div>
+      <div class="hint">Клик по картинке — увеличить · ESC — закрыть</div>
+    </div>
+    <div class="site">metod-ulyanova.ru</div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.innerHTML = '<button class="lb-close" aria-label="Закрыть">×</button><img alt="">';
+  document.body.appendChild(overlay);
+  const big = overlay.querySelector('img');
+  const close = () => overlay.classList.remove('on');
+  overlay.addEventListener('click', close);
+  overlay.querySelector('.lb-close').addEventListener('click', e => { e.stopPropagation(); close(); });
+  document.querySelectorAll('.shot img').forEach(img => {
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      big.src = img.src;
+      big.alt = img.alt;
+      overlay.classList.add('on');
+    });
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+</body>
+</html>
