@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1774" height="887" viewBox="0 0 1774 887" role="img" aria-label="Конверт: векторные элементы 1–9, cream-blue">
+<defs><linearGradient id="body-light" x1="8%" y1="0%" x2="95%" y2="100%"><stop offset="0%" stop-color="#fffdf9"/><stop offset="29%" stop-color="#f2e7d9"/><stop offset="64%" stop-color="#fffaf3"/><stop offset="100%" stop-color="#e8ded1"/></linearGradient><linearGradient id="flap-light" x1="15%" y1="0%" x2="65%" y2="100%"><stop offset="0%" stop-color="#fffdf9"/><stop offset="21%" stop-color="#f8f1e9"/><stop offset="73%" stop-color="#fffaf5"/><stop offset="100%" stop-color="#f0e5d9"/></linearGradient><linearGradient id="flap-gold" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#fff1b8"/><stop offset="25%" stop-color="#d89932"/><stop offset="53%" stop-color="#9e5e12"/><stop offset="77%" stop-color="#e8ae43"/><stop offset="100%" stop-color="#683608"/></linearGradient><linearGradient id="stripe-gold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff0b1"/><stop offset="40%" stop-color="#b4751a"/><stop offset="100%" stop-color="#59320b"/></linearGradient><linearGradient id="seam" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fffdf8"/><stop offset="50%" stop-color="#f1e2d3"/><stop offset="100%" stop-color="#d7c9ba"/></linearGradient><linearGradient id="dark-band" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0048ba"/><stop offset="48%" stop-color="#002d9d"/><stop offset="100%" stop-color="#001b63"/></linearGradient><linearGradient id="bright-band" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00d5fc"/><stop offset="40%" stop-color="#078bfa"/><stop offset="100%" stop-color="#064fe0"/></linearGradient><linearGradient id="sky-band" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f8fdff"/><stop offset="55%" stop-color="#c5e7ff"/><stop offset="100%" stop-color="#84c7ff"/></linearGradient><clipPath id="envelope-bounds"><rect width="1774" height="887"/></clipPath></defs>
+<g clip-path="url(#envelope-bounds)">
+<g id="01-envelope-body">
+<rect width="1774" height="887" fill="url(#body-light)"/>
+</g>
+<g id="04-side-folds"/>
+<g id="05-lower-fold">
+<path d="M 2,886 Q 26,810 87,771 M 1772,886 Q 1748,811 1687,771" fill="none" stroke="#e4d9cd" stroke-width="1.1"/>
+</g>
+<g id="06-diagonal-bands">
+<path d="M 0,430 L 448.04,887 L 317.65,887 L 0,563 Z" fill="url(#dark-band)"/>
+<path d="M 0,563 L 317.65,887 L 179.41,887 L 0,704 Z" fill="url(#bright-band)"/>
+<path d="M 0,704 L 179.41,887 L 0.00,887 L 0,887 Z" fill="url(#dark-band)"/>
+</g>
+<g id="07-gold-band-edges">
+<path d="M 0,430 L 448.04,887" fill="none" stroke="url(#stripe-gold)" stroke-width="4.0"/>
+<path d="M 0,563 L 317.65,887" fill="none" stroke="url(#stripe-gold)" stroke-width="2.0"/>
+<path d="M 0,704 L 179.41,887" fill="none" stroke="url(#stripe-gold)" stroke-width="2.0"/>
+</g>
+<g id="08-band-color-accents">
+<path d="M 0,563 L 317.65,887" fill="none" stroke="#e9f9ff" stroke-width="1.2"/>
+</g>
+<g id="04-side-seams">
+<path d="M 405,427 C 289,539 120,710 49,811 Q 13,852 2,886" fill="none" stroke="#d0c4b8" stroke-width="2.4"/>
+<path d="M 405,427 C 289,539 120,710 49,811 Q 13,852 2,886" fill="none" stroke="url(#seam)" stroke-width="1.0"/>
+<path d="M 1364,427 C 1494,544 1669,713 1731,819 Q 1760,858 1772,886" fill="none" stroke="#d0c4b8" stroke-width="2.4"/>
+<path d="M 1364,427 C 1494,544 1669,713 1731,819 Q 1760,858 1772,886" fill="none" stroke="url(#seam)" stroke-width="1.0"/>
+</g>
+<g id="02-upper-flap">
+<path d="M 2,1 L 1772,1 C 1753,43 1730,109 1709,153 Q 1701,169 1685,181 L 1141,598 Q 1121,614 1098,614 L 675,614 Q 650,614 630,599 L 88,190 Q 70,176 63,155 L 2,1 Z" fill="url(#flap-light)"/>
+</g>
+<g id="03-flap-gold-edge">
+<path d="M 2,1 L 63,155 Q 70,176 88,190 L 630,599 Q 650,614 675,614 L 1098,614 Q 1121,614 1141,598 L 1685,181 Q 1701,169 1709,153 L 1772,1" fill="none" stroke="#b6a38a" stroke-width="9" stroke-linejoin="round"/>
+<path d="M 2,1 L 63,155 Q 70,176 88,190 L 630,599 Q 650,614 675,614 L 1098,614 Q 1121,614 1141,598 L 1685,181 Q 1701,169 1709,153 L 1772,1" fill="none" stroke="#70430f" stroke-width="5.5" stroke-linejoin="round"/>
+<path d="M 2,1 L 63,155 Q 70,176 88,190 L 630,599 Q 650,614 675,614 L 1098,614 Q 1121,614 1141,598 L 1685,181 Q 1701,169 1709,153 L 1772,1" fill="none" stroke="url(#flap-gold)" stroke-width="3.8" stroke-linejoin="round"/>
+<path d="M 2,1 L 63,155 Q 70,176 88,190 L 630,599 Q 650,614 675,614 L 1098,614 Q 1121,614 1141,598 L 1685,181 Q 1701,169 1709,153 L 1772,1" fill="none" stroke="#ffe7a0" stroke-width="1" stroke-linejoin="round"/>
+</g>
+<g id="09-vector-surface-lighting">
+<path d="M 6,3 H 1768" fill="none" stroke="#fffefd" stroke-width="2"/>
+<path d="M 1,1 V 886 M 1773,1 V 886" fill="none" stroke="#fff9ee" stroke-width="1"/>
+</g>
+</g>
+</svg>
