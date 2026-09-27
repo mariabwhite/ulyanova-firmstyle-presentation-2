@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297" role="img" aria-label="Фон фирменного бланка A4">
+<defs>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf9"/><stop offset="0.55" stop-color="#faf6f0"/><stop offset="1" stop-color="#f4eee5"/></linearGradient>
+  <linearGradient id="navy-ribbon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#152e52"/><stop offset="0.55" stop-color="#091d3b"/><stop offset="1" stop-color="#132d50"/></linearGradient>
+  <linearGradient id="cobalt-tip" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e4d94"/><stop offset="1" stop-color="#183a7c"/></linearGradient>
+  <clipPath id="page"><rect width="210" height="297"/></clipPath>
+</defs>
+<g id="01-paper"><rect width="210" height="297" fill="url(#paper)"/></g>
+<g id="02-upper-left-corner" clip-path="url(#page)">
+  <path d="M0 0H20.333L0 18.3Z" fill="url(#cobalt-tip)"/>
+  <path d="M0 18.3L20.333 0H20.75L0 18.675Z" fill="#dab36b"/>
+  <path d="M0 18.675L20.75 0H37.222L0 33.5Z" fill="url(#navy-ribbon)"/>
+  <path d="M0 33.5L37.222 0H39.444L0 35.5Z" fill="#fffaf0"/>
+  <path d="M0 35.5L39.444 0H40.222L0 36.2Z" fill="#b98536"/>
+</g>
+<g id="03-lower-right-corner" clip-path="url(#page)" transform="rotate(180 105 148.5)">
+  <path d="M0 0H20.333L0 18.3Z" fill="url(#cobalt-tip)"/>
+  <path d="M0 18.3L20.333 0H20.75L0 18.675Z" fill="#dab36b"/>
+  <path d="M0 18.675L20.75 0H37.222L0 33.5Z" fill="url(#navy-ribbon)"/>
+  <path d="M0 33.5L37.222 0H39.444L0 35.5Z" fill="#fffaf0"/>
+  <path d="M0 35.5L39.444 0H40.222L0 36.2Z" fill="#b98536"/>
+</g>
+</svg>
